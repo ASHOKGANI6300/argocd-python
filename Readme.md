@@ -38,12 +38,15 @@ DOCKER_HUB_ACCESS_TOKEN
 # 1. Dockerfile ile Flask Uygulaması
 ## Dockerfile
 ```bash
-FROM python:3.8-slim
+FROM python:3.9
 WORKDIR /app
-COPY requirements.txt requirements.txt
-RUN pip install -r requirements.txt
-COPY . .
+COPY requirements.txt .
+RUN pip install --no-cache-dir -r requirements.txt
+COPY app.py .
+COPY templates/ ./templates/ 
+EXPOSE 5000
 CMD ["python", "app.py"]
+
 ```
 
 requirement.txt
@@ -119,7 +122,7 @@ spec:
     spec:
       containers:
         - name: myfirstpod
-          image: hbayraktar/argocd-python:v1.0
+          image: username/argocd-python:v1.0
           ports:
             - containerPort: 5000
   replicas: 1
@@ -205,7 +208,7 @@ spec:
     server: https://kubernetes.default.svc
   source:
     path: manifest
-    repoURL: 'https://github.com/hakanbayraktar/argocd-python'
+    repoURL: 'https://github.com/username/argocd-python'
     targetRevision: main
   project: default
   syncPolicy:
