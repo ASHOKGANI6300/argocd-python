@@ -13,7 +13,7 @@ spec:
     spec:
       containers:
         - name: myfirstpod
-          image: hbayraktar/flask-app:15
+          image: hbayraktar/flask-app:16
           ports:
             - containerPort: 5000
   replicas: 1
