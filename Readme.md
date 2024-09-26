@@ -1,4 +1,4 @@
-# Flask Python Projesi ve ArgoCD ile Kubernetes Dağıtımı
+# Flask Python Projesi ve ArgoCD ile Kubernetes Dağıtımı deneme
 Bu makalede, basit bir Flask uygulamasını Docker ile paketleyip, Docker Hub'a gönderme ve ArgoCD ile Kubernetes cluster'a otomatik dağıtım yapma sürecini adım adım inceleyeceğiz. Bu süreçte GitHub Actions kullanarak CI/CD pipeline'ı oluşturacağız. GitHub Actions aracılığıyla uygulama kodları her güncellendiğinde Docker imajı otomatik olarak oluşturulacak ve Kubernetes’e dağıtılacaktır. 
 
 # Proje Yapısı
