@@ -9,7 +9,7 @@ spec:
     server: https://kubernetes.default.svc
   source:
     path: manifest
-    repoURL: 'https://github.com/hakanbayraktar/argocd-python'
+    repoURL: 'https://github.com/ASHOKGANI6300/argocd-python'
     targetRevision: main
   project: default
   syncPolicy:
